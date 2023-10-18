@@ -55,10 +55,9 @@ export default function Profile() {
             <span className="text-red-700">Error uploading image</span>
           ) : imagePercent === 100 ? (
             <span className="text-green-700">Image uploaded successfully!</span>
-          ) : (
+          ) : imagePercent > 0 ? (
             <span className="text-slate-700">{`Uploading: ${imagePercent}%`}</span>
-          ) }
-            
+          ) : null}
         </p>
         <input defaultValue={currentUser.user.username} type="text" 
         id="username" 
