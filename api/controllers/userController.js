@@ -1,13 +1,11 @@
 import  errorHandler  from "../utils/error.js";
 import bcryptjs from "bcryptjs";
 import User from "../models/userModel.js";
-const test = (req, res) => {
+export const test = (req, res) => {
     res.json({
         msg: "Hello World"
     })
 }
-
-export default test;
 
 export const updateUser = async (req, res, next) => {
     if(req.user.id !== req.params.id) {
